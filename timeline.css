@@ -1,0 +1,108 @@
+/* --- Timeline / Age Counter Styling --- */
+.age-display-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    margin-bottom: 4rem;
+}
+
+.birth-info {
+    margin-bottom: 3rem;
+}
+
+.birth-info h3 {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color: var(--dark-purple);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.birth-info p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+.counter-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.counter-card {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 25px;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(132, 129, 193, 0.15);
+    transition: var(--transition);
+    border: 1px solid rgba(132, 129, 193, 0.1);
+}
+
+.counter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(132, 129, 193, 0.25);
+}
+
+.counter-card .number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark-purple);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.counter-card .label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+    letter-spacing: 2px;
+}
+
+.timeline-message {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--dark-purple);
+    line-height: 1.8;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .counter-card {
+        min-width: 120px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .counter-card .number {
+        font-size: 2.5rem;
+    }
+    
+    .birth-info p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-grid {
+        gap: 1rem;
+    }
+    
+    .counter-card {
+        min-width: 100px;
+        flex: 1 1 40%;
+    }
+}

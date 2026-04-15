@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings | Birthday Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="greetings.css">
+</head>
+
+<body class="subpage">
+    <nav class="navbar subpage-nav">
+        <a href="index.html" class="logo">BIRTHDAY<span>CELEBRATION</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Wishes</a></li>
+            <li><a href="character.html">Character</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="greetings.html" class="active">Greetings</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+        </ul>
+        <div class="mobile-menu-btn" id="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <header class="subpage-hero">
+        <div class="container">
+            <h1>Greetings</h1>
+            <p>Send your messages here</p>
+        </div>
+        <div class="subpage-balloon b-1"></div>
+        <div class="subpage-balloon b-2"></div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="greetings-card">
+                <div class="card-icon">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <span class="card-subtitle">GREETINGS</span>
+                <h2 class="card-title">Convey your Greetings Through Here</h2>
+                <div class="card-divider">
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                    <span class="line"></span>
+                </div>
+                <p class="card-description">Send her your warmest wishes, your kindest words, and your most heartfelt love — directly.</p>
+                <a href="https://wa.me/+918610707593" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Greetings 😍
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Birthday Celebration. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>

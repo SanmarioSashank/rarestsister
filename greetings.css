@@ -1,0 +1,122 @@
+/* --- Greetings Card --- */
+.greetings-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #A396E8;
+    /* Matching the purple in the image */
+    padding: 5rem 3rem;
+    border-radius: 30px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.card-subtitle {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.card-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.card-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2.5rem;
+    opacity: 0.6;
+}
+
+.card-divider .line {
+    width: 60px;
+    height: 1px;
+    background: var(--white);
+}
+
+.card-divider .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.card-description {
+    font-size: 1.2rem;
+    max-width: 550px;
+    margin: 0 auto 3.5rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 3rem;
+    background: #25D366;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: var(--transition);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn i {
+    font-size: 1.8rem;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+    background: #20BA59;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .greetings-card {
+        padding: 3rem 1.5rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+    }
+
+    .whatsapp-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}

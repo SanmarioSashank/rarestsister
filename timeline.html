@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | Birthday Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="timeline.css">
+</head>
+
+<body class="subpage">
+    <nav class="navbar subpage-nav">
+        <a href="index.html" class="logo">BIRTHDAY<span>CELEBRATION</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Wishes</a></li>
+            <li><a href="character.html">Character</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="greetings.html">Greetings</a></li>
+            <li><a href="timeline.html" class="active">Timeline</a></li>
+        </ul>
+        <div class="mobile-menu-btn" id="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <header class="subpage-hero">
+        <div class="container">
+            <h1>Timeline</h1>
+            <p>A journey through time</p>
+        </div>
+        <div class="subpage-balloon b-1"></div>
+        <div class="subpage-balloon b-2"></div>
+    </header>
+
+    <section class="section timeline-section">
+        <div class="container">
+            <h2 class="section-title">A Journey Through Time</h2>
+
+            <div class="age-display-container">
+                <div class="birth-info">
+                    <h3>TIME SINCE BIRTH</h3>
+                    <p>April 16, 2004 · 8:20 AM</p>
+                </div>
+
+                <div class="counter-grid">
+                    <div class="counter-card" id="years-card">
+                        <span class="number" id="years">00</span>
+                        <span class="label">YRS</span>
+                    </div>
+                    <div class="counter-card" id="months-card">
+                        <span class="number" id="months">00</span>
+                        <span class="label">MOS</span>
+                    </div>
+                    <div class="counter-card" id="days-card">
+                        <span class="number" id="days">00</span>
+                        <span class="label">DAYS</span>
+                    </div>
+                    <div class="counter-card" id="hours-card">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">HRS</span>
+                    </div>
+                    <div class="counter-card" id="minutes-card">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">MIN</span>
+                    </div>
+                    <div class="counter-card" id="seconds-card">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">SEC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-message">
+                <p>Every second is a testimony to the wonderful person you have become. From your first steps to your
+                    greatest achievements, the world is brighter with you in it.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Birthday Celebration. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('open');
+        });
+
+        // Age Counter Logic
+        const birthDate = new Date('April 16, 2004 08:20:00');
+
+        function updateCounter() {
+            const now = new Date();
+            let years = now.getFullYear() - birthDate.getFullYear();
+            let months = now.getMonth() - birthDate.getMonth();
+            let days = now.getDate() - birthDate.getDate();
+            let hours = now.getHours() - birthDate.getHours();
+            let minutes = now.getMinutes() - birthDate.getMinutes();
+            let seconds = now.getSeconds() - birthDate.getSeconds();
+
+            // Adjust for negative values
+            if (seconds < 0) {
+                seconds += 60;
+                minutes--;
+            }
+            if (minutes < 0) {
+                minutes += 60;
+                hours--;
+            }
+            if (hours < 0) {
+                hours += 24;
+                days--;
+            }
+            if (days < 0) {
+                const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += prevMonth.getDate();
+                months--;
+            }
+            if (months < 0) {
+                months += 12;
+                years--;
+            }
+
+            document.getElementById('years').innerText = years.toString().padStart(2, '0');
+            document.getElementById('months').innerText = months.toString().padStart(2, '0');
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCounter, 1000);
+        updateCounter();
+    </script>
+</body>
+
+</html>

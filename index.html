@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishes | Birthday Celebration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">BIRTHDAY<span>CELEBRATION</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Wishes</a></li>
+            <li><a href="character.html">Character</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="greetings.html">Greetings</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+        </ul>
+        <!-- Sign In removed -->
+        <div class="mobile-menu-btn" id="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Merged from Home) -->
+    <header class="hero" id="hero">
+        <div class="bokeh-container">
+            <div class="bokeh bokeh-1"></div>
+            <div class="bokeh bokeh-2"></div>
+            <div class="bokeh bokeh-3"></div>
+            <div class="bokeh bokeh-4"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-info-left">
+                <h4>LET'S CELEBRATE</h4>
+                <p>On this beautiful day, we gather to celebrate the life and brilliance of someone truly special. Every
+                    year is a new chapter of growth, love, and unforgettable memories.</p>
+            </div>
+
+            <div class="hero-center">
+                <div class="main-circle">
+                    <div class="circle-content">
+                        <h2>HAPPY</h2>
+                        <h1>BIRTHDAY</h1>
+                        <h3>ENISHA AKKA</h3>
+                        <p class="date">APRIL · 16 · 2026</p>
+                    </div>
+                </div>
+
+                <div class="balloon-cluster">
+                    <div class="balloon-item b-purple">
+                        <div class="gloss"></div>
+                        <div class="string"></div>
+                    </div>
+                    <div class="balloon-item b-lavender">
+                        <div class="gloss"></div>
+                        <div class="string"></div>
+                    </div>
+                    <div class="balloon-item b-swirl">
+                        <div class="swirl-overlay"></div>
+                        <div class="gloss"></div>
+                        <div class="string"></div>
+                    </div>
+                    <div class="balloon-item b-dark">
+                        <div class="gloss"></div>
+                        <div class="string"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-info-right">
+                <button class="btn-celebrate" id="celebrate-btn">CELEBRATE</button>
+            </div>
+        </div>
+
+        <div class="hero-decor">
+            <div class="pill pill-1"></div>
+            <div class="pill pill-2"></div>
+            <div class="pill pill-3"></div>
+            <div class="pill pill-4"></div>
+            <div class="sphere sphere-1"></div>
+            <div class="sphere sphere-2"></div>
+        </div>
+
+        <div class="hero-bottom">
+            <!-- URL and Socials removed -->
+        </div>
+    </header>
+
+    <!-- Wishes Section (Extended) -->
+    <section id="wishes" class="section wishes-section">
+        <div class="container">
+            <h2 class="section-title">Birthday Wishes</h2>
+           
+        </div>
+    </section>
+
+    <!-- Special Note Section -->
+    <section id="note" class="section note-section">
+        <div class="container">
+            <div class="letter-card">
+                <i class="fas fa-heart heart-icon"></i>
+                <div class="letter-content">
+                    <p>Thank you for being there whenever I needed you the most.</p>
+                    <p>You are the only person who cared for me other than my family, and then, you became family member
+                        to me.</p>
+                    <p>In my opinion, the word "sister" holds a special place because of you.</p>
+                    <p>Don't ever forget that whenever I mention "My Family", It includes you too.</p>
+                    <p>You have fulfilled the one and only regret I ever had in my life.</p>
+                    <p>When I first met you, I never thought that you would be this special to me. But I am glad that
+                        you are.</p>
+                    <p>Something is always better than nothing, But you had given me everything you had without any
+                        expectation. Thank you having me as your brother.</p>
+                    <p>I felt something was missing in my life before you came, but you had fulfilled that
+                        emotional void inside me.</p>
+                    <p>I am very shy to convey these emotions directly, but I am and I will always be grateful and loyal
+                        for everything you have given me till now.</p>
+                    <p>Thank You for treating me like your own brother.</p>
+                    <p>I will always be there for you no matter what happens.</p>
+                    <div class="letter-footer">
+                        <p>-- Nandrigal, Thanks a Lot</p>
+                        <p>-- By Your Brother from another Mother</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Birthday Celebration. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const celebrateBtn = document.getElementById('celebrate-btn');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('open');
+        });
+
+        // Confetti Animation Function
+        function fireConfetti() {
+            const duration = 5 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 2000 };
+
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+
+                confetti(Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: Math.random(), y: Math.random() - 0.2 }
+                }));
+                confetti(Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: Math.random(), y: Math.random() - 0.2 }
+                }));
+            }, 250);
+        }
+
+        // Trigger on Button Click
+        celebrateBtn.addEventListener('click', () => {
+            fireConfetti();
+            // Add a special side burst for the button click
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+
+        // Small burst on initial load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                confetti({
+                    particleCount: 100,
+                    spread: 160,
+                    origin: { y: 0.6 }
+                });
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+/* --- Character Layout --- */
+.character-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.trait {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-purple);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    transition: var(--transition);
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.trait:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(31, 38, 135, 0.1);
+}
+
+.trait h3 {
+    font-size: 1.8rem;
+    color: var(--dark-purple);
+    margin-bottom: 1rem;
+}
+
+.trait-icon {
+    font-size: 3rem;
+    color: var(--accent-purple);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Animation Delays */
+.trait:nth-child(1) { animation-delay: 0.1s; }
+.trait:nth-child(2) { animation-delay: 0.2s; }
+.trait:nth-child(3) { animation-delay: 0.3s; }
+.trait:nth-child(4) { animation-delay: 0.4s; }
+.trait:nth-child(5) { animation-delay: 0.5s; }
+.trait:nth-child(6) { animation-delay: 0.1s; } /* Restart stagger slightly for better flow in 2-col */
+.trait:nth-child(7) { animation-delay: 0.2s; }
+.trait:nth-child(8) { animation-delay: 0.3s; }
+.trait:nth-child(9) { animation-delay: 0.4s; }
+
+/* Response for Mobile */
+@media (max-width: 768px) {
+    .character-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+
